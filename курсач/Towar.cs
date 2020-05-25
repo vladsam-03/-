@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace курсач
 {
+    [Serializable]
     public class Towar
     {
         public string Name { get; set; }

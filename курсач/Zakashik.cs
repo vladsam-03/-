@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace курсач
 {
+    [Serializable]
     public class Zakashik
     {
-        public string Zakashiks { get; set; }
+        public string Name { get; set; }
         public List<string> Tel_Zakashiks { get; set; }
     }
 }

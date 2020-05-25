@@ -17,12 +17,12 @@ namespace курсач
         {
             InitializeComponent();
             this.db = db;
-            comboBox1.DataSource = db.list;
+            comboBox1.DataSource = db.types;
             comboBox1.DisplayMember = "Name";
             comboBox1.SelectedIndex = 0;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedItem == null)
                 return;
@@ -30,6 +30,7 @@ namespace курсач
             towar.Name = textBox7.Text;
             towar.Type = (Type)comboBox1.SelectedItem;
             db.towars.Add(towar);
+            db.Save();
             Close();
         }
     }

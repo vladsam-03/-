@@ -37,12 +37,15 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьКолвоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отправитьТоварToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.типToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.товарToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.фирмуЗавозаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фирмуВывозаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.имяИТелефоныToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,11 +53,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(192, 39);
+            this.label1.Location = new System.Drawing.Point(12, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Тип";
+            this.label1.Text = "Поиск по типу";
             // 
             // listView1
             // 
@@ -98,25 +101,16 @@
             // добавитьКолвоToolStripMenuItem
             // 
             this.добавитьКолвоToolStripMenuItem.Name = "добавитьКолвоToolStripMenuItem";
-            this.добавитьКолвоToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.добавитьКолвоToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.добавитьКолвоToolStripMenuItem.Text = "Завезти товар";
             this.добавитьКолвоToolStripMenuItem.Click += new System.EventHandler(this.добавитьКолвоToolStripMenuItem_Click);
             // 
             // отправитьТоварToolStripMenuItem
             // 
             this.отправитьТоварToolStripMenuItem.Name = "отправитьТоварToolStripMenuItem";
-            this.отправитьТоварToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.отправитьТоварToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.отправитьТоварToolStripMenuItem.Text = "Отправить товар";
             this.отправитьТоварToolStripMenuItem.Click += new System.EventHandler(this.отправитьТоварToolStripMenuItem_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(195, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
             // 
             // menuStrip1
             // 
@@ -132,7 +126,10 @@
             // 
             this.добавитьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.типToolStripMenuItem,
-            this.товарToolStripMenuItem});
+            this.товарToolStripMenuItem,
+            this.фирмуЗавозаToolStripMenuItem,
+            this.фирмуВывозаToolStripMenuItem,
+            this.имяИТелефоныToolStripMenuItem});
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
             this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.добавитьToolStripMenuItem.Text = "Добавить";
@@ -156,12 +153,40 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(15, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(131, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // фирмуЗавозаToolStripMenuItem
+            // 
+            this.фирмуЗавозаToolStripMenuItem.Name = "фирмуЗавозаToolStripMenuItem";
+            this.фирмуЗавозаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фирмуЗавозаToolStripMenuItem.Text = "Фирму завоза";
+            this.фирмуЗавозаToolStripMenuItem.Click += new System.EventHandler(this.фирмуЗавозаToolStripMenuItem_Click);
+            // 
+            // фирмуВывозаToolStripMenuItem
+            // 
+            this.фирмуВывозаToolStripMenuItem.Name = "фирмуВывозаToolStripMenuItem";
+            this.фирмуВывозаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фирмуВывозаToolStripMenuItem.Text = "Фирму вывоза";
+            this.фирмуВывозаToolStripMenuItem.Click += new System.EventHandler(this.фирмуВывозаToolStripMenuItem_Click);
+            // 
+            // имяИТелефоныToolStripMenuItem
+            // 
+            this.имяИТелефоныToolStripMenuItem.Name = "имяИТелефоныToolStripMenuItem";
+            this.имяИТелефоныToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.имяИТелефоныToolStripMenuItem.Text = "Имя и телефоны";
+            this.имяИТелефоныToolStripMenuItem.Click += new System.EventHandler(this.имяИТелефоныToolStripMenuItem_Click);
+            // 
             // Основное
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 384);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -184,7 +209,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -193,5 +217,9 @@
         private System.Windows.Forms.ToolStripMenuItem типToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem товарToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отправитьТоварToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripMenuItem фирмуЗавозаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem фирмуВывозаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem имяИТелефоныToolStripMenuItem;
     }
 }

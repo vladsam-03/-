@@ -21,8 +21,10 @@ namespace курсач
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Type type = new Type { Name = textBox7.Text };
-            db.list.Add(type);
+
+            Zakashik zakashik = new Zakashik { Name = textBox7.Text, Tel_Zakashiks = new List<string>() };
+            db.zakashiks.Add(zakashik);
+            db.Save();
             Close();
         }
     }

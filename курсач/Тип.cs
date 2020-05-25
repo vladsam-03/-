@@ -22,7 +22,8 @@ namespace курсач
         private void button1_Click(object sender, EventArgs e)
         {
             Type type = new Type { Name = textBox7.Text };
-            db.list.Add(type);
+            db.types.Add(type);
+            db.Save();
             Close();
         }
     }

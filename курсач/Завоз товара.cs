@@ -13,15 +13,23 @@ namespace курсач
     public partial class Завоз_товара : Form
     {
         DB db;
-        public Завоз_товара(DB db)
+        Towar towar;
+        public Завоз_товара(DB db, Towar tower)
         {
             InitializeComponent();
             this.db = db;
+            towar = tower;
+            comboBox1.DataSource = db.postavshiks;
+            comboBox1.DisplayMember = "Name";
+            comboBox1.SelectedIndex = 0;
         }
 
-        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Добавление_имени_и_телефона_фирмы(db).Show();
-        }
+        
+            private void button1_Click(object sender, EventArgs e)
+            {
+                towar.Kolichestvo += Convert.ToInt32(textBox1.Text);
+                db.Save();
+                Close();
+            }
     }
 }

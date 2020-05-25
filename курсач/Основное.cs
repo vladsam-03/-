@@ -52,12 +52,33 @@ namespace курсач
 
         private void добавитьКолвоToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Завоз_товара(db).Show();
+            if (listView1.SelectedItems.Count == 0)
+                return;
+            Towar towar = (Towar)listView1.SelectedItems[0].Tag;
+            new Завоз_товара(db, towar).Show();
         }
 
         private void отправитьТоварToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Вывоз_товара(db).Show();
+            if (listView1.SelectedItems.Count == 0)
+                return;
+            Towar towar = (Towar)listView1.SelectedItems[0].Tag;
+            new Вывоз_товара(db,towar).Show();
+        }
+
+        private void фирмуЗавозаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Фирма_заказчика(db).Show();
+        }
+
+        private void фирмуВывозаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Фирма_поставшика(db).Show();
+        }
+
+        private void имяИТелефоныToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Добавление_имени_и_телефона_фирмы(db).Show();
         }
     }
     
