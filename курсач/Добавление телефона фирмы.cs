@@ -66,6 +66,7 @@ namespace курсач
             Zakashik zakashik = (Zakashik)comboBox1.SelectedItem;
             zakashik.Tel_Zakashiks.Add(textBox2.Text);
             db.Save();
+            textBox2.Clear();
             show();
         }
 
@@ -76,6 +77,7 @@ namespace курсач
             Postavshik postavshik = (Postavshik)comboBox2.SelectedItem;
             postavshik.Tel_Postavshiks.Add(textBox3.Text);
             db.Save();
+            textBox3.Clear();
             show2();
         }
 
@@ -86,6 +88,52 @@ namespace курсач
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            show2();
+        }
+
+        private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+                return;
+            string tel = (string)listView1.SelectedItems[0].Tag;
+            textBox2.Text = tel;
+            Zakashik zakashik = (Zakashik)comboBox1.SelectedItem;
+            zakashik.Tel_Zakashiks.Remove(tel);
+            db.Save();
+            show();
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+                return;
+            string tel = (string)listView1.SelectedItems[0].Tag;
+            Zakashik zakashik = (Zakashik)comboBox1.SelectedItem;
+            zakashik.Tel_Zakashiks.Remove(tel);
+            db.Save();
+            show();
+        }
+
+        private void редактироватьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count == 0)
+                return;
+            string tel = (string)listView2.SelectedItems[0].Tag;
+            textBox3.Text = tel;
+            Postavshik postavshik = (Postavshik)comboBox2.SelectedItem;
+            postavshik.Tel_Postavshiks.Remove(tel);
+            db.Save();
+            show2();
+        }
+
+        private void удалитьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count == 0)
+                return;
+            string tel1 = (string)listView2.SelectedItems[0].Tag;
+            Postavshik postavshik = (Postavshik)comboBox2.SelectedItem;
+            postavshik.Tel_Postavshiks.Remove(tel1);
+            db.Save();
             show2();
         }
     }

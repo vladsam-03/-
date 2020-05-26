@@ -59,11 +59,11 @@
     <Compile Include="Вывоз товара.Designer.cs">
       <DependentUpon>Вывоз товара.cs</DependentUpon>
     </Compile>
-    <Compile Include="Добавление имени и телефона фирмы.cs">
+    <Compile Include="Добавление телефона фирмы.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Добавление имени и телефона фирмы.Designer.cs">
-      <DependentUpon>Добавление имени и телефона фирмы.cs</DependentUpon>
+    <Compile Include="Добавление телефона фирмы.Designer.cs">
+      <DependentUpon>Добавление телефона фирмы.cs</DependentUpon>
     </Compile>
     <Compile Include="Завоз товара.cs">
       <SubType>Form</SubType>
@@ -113,8 +113,8 @@
     <EmbeddedResource Include="Вывоз товара.resx">
       <DependentUpon>Вывоз товара.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Добавление имени и телефона фирмы.resx">
-      <DependentUpon>Добавление имени и телефона фирмы.cs</DependentUpon>
+    <EmbeddedResource Include="Добавление телефона фирмы.resx">
+      <DependentUpon>Добавление телефона фирмы.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Завоз товара.resx">
       <DependentUpon>Завоз товара.cs</DependentUpon>

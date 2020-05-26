@@ -47,6 +47,8 @@ namespace курсач
         {
             if (listView1.SelectedItems.Count != 0)
                 return;
+            if (textBox1.Text != "")
+                return;
             show();
         }
 
@@ -68,17 +70,30 @@ namespace курсач
 
         private void фирмуЗавозаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Фирма_заказчика(db).Show();
+            new Фирма_поставшика(db).Show();
         }
 
         private void фирмуВывозаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Фирма_поставшика(db).Show();
+            new Фирма_заказчика(db).Show();
         }
 
         private void имяИТелефоныToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Добавление_имени_и_телефона_фирмы(db).Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            foreach (Towar тов in db.towars.Where(s => s.Type.Name.ToLower().Contains(textBox1.Text.ToLower())))
+            {
+                ListViewItem row = new ListViewItem(тов.Type.Name);
+                row.SubItems.Add(тов.Name);
+                row.SubItems.Add(тов.Kolichestvo.ToString());
+                row.Tag = тов;
+                listView1.Items.Add(row);
+            }
         }
     }
     

@@ -28,16 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.редактироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -45,6 +52,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox2
@@ -86,6 +95,8 @@
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(191, 9);
             this.listView1.Name = "listView1";
@@ -98,6 +109,28 @@
             // 
             this.columnHeader1.Text = "Номер";
             this.columnHeader1.Width = 265;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.редактироватьToolStripMenuItem,
+            this.удалитьToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 48);
+            // 
+            // редактироватьToolStripMenuItem
+            // 
+            this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
+            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.редактироватьToolStripMenuItem.Text = "Редактировать";
+            this.редактироватьToolStripMenuItem.Click += new System.EventHandler(this.редактироватьToolStripMenuItem_Click);
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.удалитьToolStripMenuItem.Text = "Удалить";
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // button2
             // 
@@ -123,6 +156,8 @@
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2});
+            this.listView2.ContextMenuStrip = this.contextMenuStrip2;
+            this.listView2.FullRowSelect = true;
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(654, 9);
             this.listView2.Name = "listView2";
@@ -135,6 +170,28 @@
             // 
             this.columnHeader2.Text = "Номер";
             this.columnHeader2.Width = 265;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.редактироватьToolStripMenuItem1,
+            this.удалитьToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 70);
+            // 
+            // редактироватьToolStripMenuItem1
+            // 
+            this.редактироватьToolStripMenuItem1.Name = "редактироватьToolStripMenuItem1";
+            this.редактироватьToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.редактироватьToolStripMenuItem1.Text = "Редактировать";
+            this.редактироватьToolStripMenuItem1.Click += new System.EventHandler(this.редактироватьToolStripMenuItem1_Click);
+            // 
+            // удалитьToolStripMenuItem1
+            // 
+            this.удалитьToolStripMenuItem1.Name = "удалитьToolStripMenuItem1";
+            this.удалитьToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.удалитьToolStripMenuItem1.Text = "Удалить";
+            this.удалитьToolStripMenuItem1.Click += new System.EventHandler(this.удалитьToolStripMenuItem1_Click);
             // 
             // label3
             // 
@@ -223,6 +280,8 @@
             this.Controls.Add(this.textBox2);
             this.Name = "Добавление_имени_и_телефона_фирмы";
             this.Text = "Добавление имени и телефона фирмы";
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +305,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem редактироватьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem редактироватьToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem1;
     }
 }
