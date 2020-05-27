@@ -49,6 +49,8 @@ namespace курсач
                 return;
             if (textBox1.Text != "")
                 return;
+            if (textBox2.Text != "")
+                return;
             show();
         }
 
@@ -87,6 +89,19 @@ namespace курсач
         {
             listView1.Items.Clear();
             foreach (Towar тов in db.towars.Where(s => s.Type.Name.ToLower().Contains(textBox1.Text.ToLower())))
+            {
+                ListViewItem row = new ListViewItem(тов.Type.Name);
+                row.SubItems.Add(тов.Name);
+                row.SubItems.Add(тов.Kolichestvo.ToString());
+                row.Tag = тов;
+                listView1.Items.Add(row);
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            foreach (Towar тов in db.towars.Where(s => s.Name.ToLower().Contains(textBox2.Text.ToLower())))
             {
                 ListViewItem row = new ListViewItem(тов.Type.Name);
                 row.SubItems.Add(тов.Name);
