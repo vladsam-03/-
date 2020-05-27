@@ -24,12 +24,14 @@ namespace курсач
             comboBox1.SelectedIndex = 0;
         }
 
-        
-            private void button1_Click(object sender, EventArgs e)
-            {
-                towar.Kolichestvo += Convert.ToInt32(textBox1.Text);
-                db.Save();
-                Close();
-            }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            towar.Kolichestvo += Convert.ToInt32(textBox1.Text);
+            Postavshik postavshik = (Postavshik)comboBox1.SelectedItem;
+            db.a(postavshik, towar, Convert.ToInt32(textBox1.Text));
+            db.Save();
+            Close();
+        }
     }
 }

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB.cs" />
+    <Compile Include="History.cs" />
     <Compile Include="Postavshik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +71,12 @@
     </Compile>
     <Compile Include="Завоз товара.Designer.cs">
       <DependentUpon>Завоз товара.cs</DependentUpon>
+    </Compile>
+    <Compile Include="История событий.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="История событий.Designer.cs">
+      <DependentUpon>История событий.cs</DependentUpon>
     </Compile>
     <Compile Include="Основное.cs">
       <SubType>Form</SubType>
@@ -118,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Завоз товара.resx">
       <DependentUpon>Завоз товара.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="История событий.resx">
+      <DependentUpon>История событий.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Основное.resx">
       <DependentUpon>Основное.cs</DependentUpon>

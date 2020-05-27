@@ -110,6 +110,11 @@ namespace курсач
                 listView1.Items.Add(row);
             }
         }
+
+        private void исторяСобытийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new История_событий(db).Show();
+        }
     }
     
 }

@@ -19,7 +19,7 @@ namespace курсач
             InitializeComponent();
             this.db = db;
             towar = tower;
-            comboBox1.DataSource = db.postavshiks;
+            comboBox1.DataSource = db.zakashiks;
             comboBox1.DisplayMember = "Name";
             comboBox1.SelectedIndex = 0;
         }
@@ -28,6 +28,8 @@ namespace курсач
         private void button1_Click(object sender, EventArgs e)
         {
             towar.Kolichestvo -= Convert.ToInt32(textBox1.Text);
+            Zakashik zakashik = (Zakashik)comboBox1.SelectedItem;
+            db.b(zakashik, towar, Convert.ToInt32(textBox1.Text));
             db.Save();
             Close();
         }

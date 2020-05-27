@@ -48,6 +48,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.исторяСобытийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -119,7 +120,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem});
+            this.добавитьToolStripMenuItem,
+            this.исторяСобытийToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(326, 24);
@@ -141,35 +143,35 @@
             // типToolStripMenuItem
             // 
             this.типToolStripMenuItem.Name = "типToolStripMenuItem";
-            this.типToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.типToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.типToolStripMenuItem.Text = "Тип";
             this.типToolStripMenuItem.Click += new System.EventHandler(this.типToolStripMenuItem_Click);
             // 
             // товарToolStripMenuItem
             // 
             this.товарToolStripMenuItem.Name = "товарToolStripMenuItem";
-            this.товарToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.товарToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.товарToolStripMenuItem.Text = "Товар";
             this.товарToolStripMenuItem.Click += new System.EventHandler(this.товарToolStripMenuItem_Click);
             // 
             // фирмуЗавозаToolStripMenuItem
             // 
             this.фирмуЗавозаToolStripMenuItem.Name = "фирмуЗавозаToolStripMenuItem";
-            this.фирмуЗавозаToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.фирмуЗавозаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.фирмуЗавозаToolStripMenuItem.Text = "Фирму завоза";
             this.фирмуЗавозаToolStripMenuItem.Click += new System.EventHandler(this.фирмуЗавозаToolStripMenuItem_Click);
             // 
             // фирмуВывозаToolStripMenuItem
             // 
             this.фирмуВывозаToolStripMenuItem.Name = "фирмуВывозаToolStripMenuItem";
-            this.фирмуВывозаToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.фирмуВывозаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.фирмуВывозаToolStripMenuItem.Text = "Фирму вывоза";
             this.фирмуВывозаToolStripMenuItem.Click += new System.EventHandler(this.фирмуВывозаToolStripMenuItem_Click);
             // 
             // ТелефоныToolStripMenuItem
             // 
             this.ТелефоныToolStripMenuItem.Name = "ТелефоныToolStripMenuItem";
-            this.ТелефоныToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.ТелефоныToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ТелефоныToolStripMenuItem.Text = "Телефоны";
             this.ТелефоныToolStripMenuItem.Click += new System.EventHandler(this.имяИТелефоныToolStripMenuItem_Click);
             // 
@@ -202,6 +204,13 @@
             this.textBox2.Size = new System.Drawing.Size(131, 20);
             this.textBox2.TabIndex = 6;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // исторяСобытийToolStripMenuItem
+            // 
+            this.исторяСобытийToolStripMenuItem.Name = "исторяСобытийToolStripMenuItem";
+            this.исторяСобытийToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.исторяСобытийToolStripMenuItem.Text = "История событий";
+            this.исторяСобытийToolStripMenuItem.Click += new System.EventHandler(this.исторяСобытийToolStripMenuItem_Click);
             // 
             // Основное
             // 
@@ -247,5 +256,6 @@
         private System.Windows.Forms.ToolStripMenuItem ТелефоныToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ToolStripMenuItem исторяСобытийToolStripMenuItem;
     }
 }
